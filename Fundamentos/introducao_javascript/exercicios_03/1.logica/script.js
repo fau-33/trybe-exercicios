@@ -19,3 +19,4 @@ if(sum > 15){
   // Caso não obedeça à condição: Imprimir a mensagem “valor menor que 16”;
   console.log('valor menor que 16');
 }
+
