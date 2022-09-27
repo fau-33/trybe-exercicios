@@ -1,0 +1,17 @@
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+li:hover {
+  background-color: red;
+  cursor: pointer;
+}
+li:active {
+  font-size: 20px;
+}
+ul{
+  list-style: none;
+  text-align: center;
+}
