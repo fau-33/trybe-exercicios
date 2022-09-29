@@ -4,7 +4,6 @@
       - document.getElementsByClassName()
       - document.getElementsByTagName()
 
-      5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 */
 
@@ -36,3 +35,10 @@ function titleCorrection(){
  title.innerText = "Exercício - Javascript";
 }
 titleCorrection();
+
+//5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
+function changeTextToUppercase(){
+  const p = document.getElementsByTagName('p')[0];
+  p.style.textTransform = "uppercase";
+}
+changeTextToUppercase();
