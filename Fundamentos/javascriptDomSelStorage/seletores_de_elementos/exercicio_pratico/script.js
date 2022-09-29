@@ -4,7 +4,6 @@
       - document.getElementsByClassName()
       - document.getElementsByTagName()
 
-      4. Crie e execute uma função que corrija o texto da tag <h1>.
       5. Crie e execute uma função que modifique o texto da primeira tag <p> para maiúsculo.
       6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 */
@@ -30,3 +29,10 @@ function changeColorRedSquareWhite(){
  centerContent.style.backgroundColor = "white";
 }
 changeColorRedSquareWhite();
+
+//4. Crie e execute uma função que corrija o texto da tag <h1>.
+function titleCorrection(){
+ const title = document.getElementsByClassName('title')[0];
+ title.innerText = "Exercício - Javascript";
+}
+titleCorrection();
