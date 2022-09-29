@@ -3,8 +3,6 @@
       - document.getElementById()
       - document.getElementsByClassName()
       - document.getElementsByTagName()
-
-      6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 */
 
 /* 1. Crie e execute uma função que mude o texto na tag `<p>-----</p>`, para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício) */
@@ -42,3 +40,13 @@ function changeTextToUppercase(){
   p.style.textTransform = "uppercase";
 }
 changeTextToUppercase();
+
+//6. Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+function showParagraphs(){
+  let paragraph = document.getElementsByTagName('p');
+  for(let index = 0; index < paragraph.length; index += 1){
+    console.log(paragraph[index].innerHTML);
+  }
+}
+
+showParagraphs();
