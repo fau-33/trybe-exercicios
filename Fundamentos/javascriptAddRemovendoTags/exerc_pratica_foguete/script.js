@@ -66,3 +66,16 @@ for(let index = 0; index <= 3; index += 1){
 // Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
 const sectionLeftContent = document.getElementsByClassName('left-content')[0];
 elementMain.removeChild(sectionLeftContent);
+
+// Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+const centralizeSection = document.getElementsByClassName('right-content')[0];
+centralizeSection.style.marginRight = 'auto';
+
+// Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+const sectionCenterContent = document.getElementsByClassName('center-content');
+sectionCenterContent.parentNode.style.backgroundColor = 'green';
+
+// Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+const ul = document.getElementsByTagName('ul')[0];
+ul.lastChild.remove();
+ul.lastChild.remove();
