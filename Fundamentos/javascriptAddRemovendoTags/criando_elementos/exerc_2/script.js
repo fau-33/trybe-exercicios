@@ -9,6 +9,16 @@ const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta'); //
 const filhoElementoOndeVoceEsta = document.createElement('section'); // criando o novo elemento
 filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
 elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta); // Adiciona o elemento criado como filho com id 
-console.log(filhoElementoOndeVoceEsta);
+
+// Crie um filho para primeiroFilhoDoFilho.
+const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho'); // recuperar o id
+const filhoPrimeiroFilhoDoFilho = document.createElement('section'); // criando o novo elemento
+filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
+primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho); // Adiciona o elemento criado como filho com id
+
+// A partir desse filho criado, acesse terceiroFilho.
+const terceiroFilho = filhoPrimeiroFilhoDoFilho.parentElement;
+console.log(terceiroFilho);
+
 
 
