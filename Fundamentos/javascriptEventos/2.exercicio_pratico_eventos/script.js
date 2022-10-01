@@ -29,3 +29,37 @@ Os dias 24, 25 e 31 são feriados e, além da classe day, devem conter também a
 Os dias 4, 11, 18 e 25 são sextas-feiras. Eles devem conter a classe day e a classe friday. Ex: <li class="day friday">4</li> */
 
 let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
+function createDaysOfTheMonth(){
+  let getDayList = document.querySelector('#days');
+  for(let index = 0; index < decemberDaysList.length; index += 1){
+    let day = decemberDaysList[index];
+    let dayItem = document.createElement('li');
+    if(day === 24 || day === 31){
+      dayItem.className = "holiday";
+      dayItem.innerHTML = day;
+      getDayList.appendChild(dayItem);
+    }else if(day === 4 || day === 11 || day === 18){
+      dayItem.className = 'day holiday';
+      dayItem.innerHTML = day;
+      getDayList.appendChild(dayItem);
+    }else if(day === 25){
+      dayItem.className = 'day holiday friday';
+      dayItem.innerHTML = day;
+      getDayList.appendChild(dayItem);
+    }else {
+      dayItem.className = 'day';
+      dayItem.innerHTML = day;
+      getDayList.appendChild(dayItem);
+    }
+  }
+}
+createDaysOfTheMonth();
+
+/* Parte 2
+
+Implemente uma função que crie dinamicamente um botão com o nome “Feriados”.
+Sua função deve receber um parâmetro com a string 'Feriados'
+Adicione a este botão a ID "btn-holiday"
+Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
+ */
