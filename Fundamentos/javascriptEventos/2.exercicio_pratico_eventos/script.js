@@ -63,3 +63,14 @@ Sua função deve receber um parâmetro com a string 'Feriados'
 Adicione a este botão a ID "btn-holiday"
 Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
  */
+function createHolidayButton(buttonName){
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.querySelector('button');
+  let newButtonID = 'btn-holiday';
+
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+
+  buttonContainer.appendChild(newButton);
+}
+createHolidayButton('Feriados');
