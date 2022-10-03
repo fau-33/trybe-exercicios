@@ -212,3 +212,26 @@ function setTaskClass(){
   })
 }
 setTaskClass();
+
+/* Parte 10
+
+Implemente uma função que atribua a cor da tarefa ao dia do calendário.
+Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada.
+Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) */
+function setDayColor(){
+  let selectedTask = document.getElementsByClassName('task selected');// Retorna um array com todos os elementos com a classe "task selected"
+  let days = document.querySelector('#days');// Seleciona a primeira ul com id "days"
+  let taskDiv = document.querySelector('.task');// Seleciona o primeiro elemento com a classe "task"
+  let taskColor = taskDiv.style.backgroundColor;// Salva o Background Color da classe task na variável "taskColor"
+
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.backgroundColor;
+    if(selectedTask.length > 0 || eventTargetColor !== taskColor){
+      let color = selectedTask[0].backgroundColor;
+      event.target.style.backgroundColor = color; 
+    }else if(eventTargetColor === taskColor){
+      event.target.style.backgroundColor = 'rgb(119,119,119)';
+    }
+  })
+}
+setDayColor();
