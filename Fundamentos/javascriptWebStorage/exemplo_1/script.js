@@ -19,3 +19,23 @@ function addPhraseToLocalStorage(){
   localStorage.setItem('phrases', JSON.stringify(oldList));
   insertPhraseInDom();
 }
+
+function innitialRenderization(){
+  if(localStorage.getItem('phrases') === null){
+    localStorage.setItem('phrases', JSON.stringify([]));
+  }else {
+    const phrasesList = JSON.parse(localStorage.getItem('phrases'));
+    const listLength = phrasesList.lenght - 1;
+    for(let index = 0; index < listLength.lenght; index += 1){
+      const listElement = document.createElement('li');
+      listElement.innerText = phrasesList[index];
+      list.appendChild(listElement);
+    }
+  }
+}
+
+button.addEventListener('click', addPhraseToLocalStorage);
+
+window.load = function() {
+  innitialRenderization();
+}
