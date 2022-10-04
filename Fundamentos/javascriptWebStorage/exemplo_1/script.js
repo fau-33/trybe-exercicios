@@ -11,3 +11,11 @@ function insertPhraseInDom(){
   phrase.innerText = phraseText;
   list.appendChild(phrase);
 }
+
+function addPhraseToLocalStorage(){
+  const oldList = JSON.parse(localStorage.getItem('phrases'));
+  const phraseText = input.value;
+  oldList.push(phraseText);
+  localStorage.setItem('phrases', JSON.stringify(oldList));
+  insertPhraseInDom();
+}
