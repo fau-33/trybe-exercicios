@@ -10,16 +10,15 @@
 </head>
 
 <body>
-  <fieldset method="GET" class="form">
+  <fieldset method="post" class="form">
     <h1>Formulário</h1>
     <div>
       <label for="fullName">Nome Completo:</label>
-      <input type="text" name="fullName" id="fullName" placeholder="Digite o seu nome completo" minlength="10"
-        maxlength="40" required>
+      <input type="text" name="fullName" id="fullName" placeholder="Digite o seu nome completo" required>
       <br>
       <br>
       <label for="email">Endereço de Email:</label>
-      <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" minlength="10" maxlength="50"
+      <input type="email" name="email" id="email" placeholder="Digite o seu e-mail"
         required>
     </div>
 
@@ -51,7 +50,7 @@
       <input type="checkbox" name="agreement" id="agreement" required>
     </div>
     <div>
-      <button type="submit" id="submit-btn">Participar do concurso TrybeTrip</button>
+      <button type="submit" id="submit-btn" disabled>Participar do concurso TrybeTrip</button>
       <button type="clear" id="clear-btn">Apagar informações</button>
     </div>
   </fieldset>
