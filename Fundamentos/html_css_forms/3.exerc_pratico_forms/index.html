@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form action="">
+    <h1>Formulário</h1>
+    <section>
+      <label for="fullName">Nome Completo:</label>
+      <input type="text" name="fullName" id="fullName" placeholder="Digite o seu nome completo" minlength="10" maxlength="40" required>
+      <br>
+      <br>
+      <label for="email">Endereço de Email:</label>
+      <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" minlength="10" maxlength="50" required>
+    </section>
+    <section>
+      
+      <input type="radio" name="destination1" className="radios" name="destinations" value="Cidade" required>
+      <label for="destination1">Cidade</label>
+      <input type="radio" name="destination2" className="radios" name="destinations" value="Campo" required>
+      <label for="destination2">Campo</label>
+      <input type="radio" name="destination3" className="radios" name="destinations" value="Praia" required>
+      <label for="destination3">Praia</label>
+      <input type="radio" name="destination4" className="radios" name="destinations" value="Montanhas" required>
+      <label for="destination4">Montanhas</label>
+    </section>
+  </form>
+</body>
+</html>
