@@ -10,6 +10,10 @@ p {
   padding: 20px;
 }
 
+li {
+  list-style: none;
+}
+
 @media(max-width: 600px) {
   body {
     background-color: lightcoral;
@@ -31,5 +35,40 @@ p {
   }
   .container {
     flex-wrap: wrap;
+  }
+}
+
+@media(min-width: 1000px) {
+  body {
+    background-color: lawngreen;
+  }
+  .container {
+    flex-wrap: nowrap;
+  }
+  header p {
+    text-align: center;
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+  }
+  .link-item {
+    list-style: none;
+    margin-right: 12px;
+  }
+  .aside-one .aside-one-title {
+    text-align: center;
+  }
+  .aside-one .aside-one-chapters {
+    text-align: center;
+  }
+  .aside-two .aside-two-title {
+    text-align: center;
+  }
+  .aside-two .aside-two-information {
+    text-align: center;
+  }
+  .main-content h1 {
+    text-align: center;
   }
 }
