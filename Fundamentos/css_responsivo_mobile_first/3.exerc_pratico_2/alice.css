@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+p {
+  padding: 20px;
+}
+
+@media(max-width: 600px) {
+  body {
+    background-color: lightcoral;
+    font-family: sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    padding: 0 5px;
+    line-height: 1.5em;
+  }
+}
