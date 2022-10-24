@@ -45,3 +45,29 @@ repeat(3, isOdd); */ // Testa quais números serão ímpares;
 
 console.log(numberGenerator()); */
 
+// Exercícios de fixação
+
+const wakeUp = (string) => {
+  return string;
+}
+wakeUp('Acordando!');
+
+const letHaveCoffe = (string) => {
+  return string;
+}
+letHaveCoffe('Bora tomar café!!');
+
+const wentToSleep = (string) => {
+  return string;
+}
+
+wentToSleep('Partiu dormir!!');
+
+const doingThings = (callback) => {
+  const result = callback();
+  return result;
+}
+
+console.log(doingThings(wakeUp));
+console.log(doingThings(wentToSleep));
+console.log(doingThings(letHaveCoffe));
