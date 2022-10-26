@@ -146,3 +146,33 @@ function booksOrderedByReleaseYearDesc() {
   return books.sort((releaseA, releaseB) => releaseB.releaseYear - releaseA.releaseYear);
 }
 //console.log(booksOrderedByReleaseYearDesc());
+
+// Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+//const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => (
+    book.author.birthYear > 1900 && book.author.birthYear <= 2000
+  ));
+}
+//console.log(everyoneWasBornOnSecXX());
+
+// Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+//const expectedResult = true;
+
+function someBookWasReleaseOnThe80s() {
+  return books.some((book) => book.releaseYear > 1980 && book.releaseYear <= 1989);
+}
+//console.log(someBookWasReleaseOnThe80s());
+
+// Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+//const expectedResult = false;
+
+function authorUnique() {
+  return books.every((book) => {
+    !books.some((bookSome) => {
+      (bookSome.author.birthYear === book.author.birthYear) && (bookSome.author.name !== book.author.name);
+    })
+  });
+}
+//console.log(authorUnique());
