@@ -1,0 +1,57 @@
+/*
+Parte II
+Exercício 1
+Abaixo, você verá algumas especificações de algoritmos para desenvolver. É fundamental que você utilize o que aprendeu sobre let, const, arrow functions, template literals e ternary operator.
+
+Crie uma função que receba um número e retorne seu fatorial.
+
+Na matemática, o fatorial de um número inteiro e positivo N, representado por N!, é o produto de todos os seus antecessores até o número um. Exemplo: 4! = 4 * 3 * 2 * 1 = 24.
+Com base nessas informações:
+
+Crie a função factorial que recebe um número como parâmetro, utilizando arrow functions (Lembre-se de armazenar a função utilizando o tipo de variável correta).
+
+Dentro da função crie uma variável result, que será o retorno final da função.
+
+Crie a lógica para retornar o fatorial de N!.
+
+Imprima no terminal “Esse é o fatorial resultado da função“ (Lembre-se de utilizar template literals nesse momento).
+
+Bônus: tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
+
+*/
+
+const factorial = (n) => {
+  let result = 1;
+  for(let index = 2; index <= n; index += 1) {
+    result *= index;
+  }
+  return result;
+}
+
+const print = factorial(10);
+//console.log(`Esse é o fatorial ${print}`);
+
+/**
+ * Exercício 2
+Crie uma função que receba uma frase como parâmetro e retorne a maior palavra contida nesta frase.
+ */
+
+/* const longestWord = (text) => {
+  const wordArray = text.split(' ');
+  let maxLength = 0;
+  let result = '';
+
+  for(let word of wordArray) {
+    if(word.length > maxLength) {
+      maxLength = word.length;
+      result = word;
+    }
+  }
+  return result;
+}
+ */
+//console.log(longestWord('Antonio foi ao banheiro e não sabemos o que aconteceu'));
+
+const longestWord = text => text.split(' ').sort((wordA, wordB) => wordB.length - wordA.length)[0];
+
+//console.log(longestWord("Antonio foi ao banheiro e não sabemos o que aconteceu"));
